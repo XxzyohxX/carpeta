@@ -1,0 +1,51 @@
+#include <stdio.h>
+
+#define N 3
+
+float calcular_traza(float matriz[][N]);
+float calcular_traza2(float matriz[][N+1]);
+float calcular_traza3(size_t n, float matriz[][n]);
+
+int main() {
+    float matriz[N][N] = {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9}
+    };
+
+    //float traza = calcular_traza(matriz);
+    //float traza = calcular_traza2(matriz);
+    float traza = calcular_traza3(N, matriz);
+
+    printf("%f\n", traza);
+
+    return 0;
+}
+
+float calcular_traza(float matriz[][N]) {
+    float traza = 0;
+
+    for(size_t i = 0; i < N; i++)
+        traza += matriz[i][i];
+
+    return traza;
+}
+
+float calcular_traza2(float matriz[][N+1]) {
+    float traza = 0;
+
+    for(size_t i = 0; i < N; i++)
+        traza += matriz[i][0];
+
+    return traza;
+}
+
+float calcular_traza3(size_t n, float matriz[][n]) {
+    float traza = 0;
+
+    for(size_t i = 0; i < n; i++)
+        traza += matriz[i][i];
+
+    return traza;
+}
+

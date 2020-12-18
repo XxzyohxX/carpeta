@@ -1,0 +1,21 @@
+#define N 5
+
+// Modo humano
+bool es_triangular_superior(float m[][N]) {
+    for(size_t i = 0; i < N; i++)
+        for(size_t j = 0; j < N; j++)
+            if(i > j && m[i][j] != 0)
+                return false;
+
+    return true;
+}
+
+// Modo dios
+bool es_triangular_superior(float m[][N]) {
+    for(size_t i = 0; i < N; i++)
+        for(size_t j = 0; j < i; j++)
+            if(m[i][j] != 0)
+                return false;
+
+    return true;
+}

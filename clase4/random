@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+float random() {
+    return (float)rand() / (RAND_MAX + 1);
+}
+
+int main(void) {
+    srand(time(NULL));
+
+    for(size_t i = 0; i < 10; i++)
+        printf("%d\n", rand());
+
+    return 0;
+}
+
