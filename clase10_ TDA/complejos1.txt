@@ -1,0 +1,13 @@
+TDA Complejo:
+
+*) Real/Imaginaria o Modulo/Argumento
+
+Operaciones:
+*) a + b
+*) a - b
+*) a * b
+*) a / b
+*) a*
+*) ...
+*) Re(a), Im(a), Mod(a), Arg(a)
+
